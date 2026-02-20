@@ -1,26 +1,14 @@
-# Payament-and-receipt-manager
+# Receipt Manager
 
-## Ideia
-A ideia do projeto é que o usuario posso importar seus comprovantes de pagamento pix, tanto como pagador ou beneficiário, trazendo consigo as funcionalidades de:
-- Filtros
-- Dowload do comprovante
-- Compartilhamento
-- Automatização de criação de perfis
-- Relátorio de gastos
-  
+A ideia base deste projeto é permitir a gestão de comprovantes de pagamento, seja de transparência ou de recebimento. Ademais será possível:
+
+- Criar filtros;
+- Fazer o download de comprovantes;
+- Emitir relatórios em PDF;
+- Criar categorias e perfis para organizar os comprovantes.
  
-
 Essas são as ideias do projeto para primeira versão, mas com certeza terá novas funcionalidades no futuro.
 
-## Dowload do software - Git
+## Estrutura Técnica da Aplicação
 
-### Windows
-1.  win + R
-2.  digite `PowerShell` e prescione enter
-3.  cole o comando `git clone "https://github.com/JoaoGabeee/Payament-and-receipt-manager"`
-
-## Contribuintes
-
-> **[@JoaoGabee](https://github.com/JoaoGabeee/)**<br>
-> **[@HeberBarra](https://github.com/HeberBarra/)**
-
+A nossa ideia é dividir a aplicação em dois grandes blocos: uma RESTful API para fazer as operações no banco feita em Java usando a framework Spring e uma aplicação web feita em python para fazer a intermediação entre o usuário e a API.
