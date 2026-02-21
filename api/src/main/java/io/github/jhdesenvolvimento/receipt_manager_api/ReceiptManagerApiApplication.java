@@ -1,13 +1,13 @@
-package com.Payament_and_receipt_manager.PRM;
+package io.github.jhdesenvolvimento.receipt_manager_api;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class PrmApplication {
+public class ReceiptManagerApiApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(PrmApplication.class, args);
+		SpringApplication.run(ReceiptManagerApiApplication.class, args);
 	}
 
 }

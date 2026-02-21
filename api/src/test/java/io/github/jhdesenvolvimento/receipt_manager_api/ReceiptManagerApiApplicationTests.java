@@ -1,10 +1,10 @@
-package com.Payament_and_receipt_manager.PRM;
+package io.github.jhdesenvolvimento.receipt_manager_api;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class PrmApplicationTests {
+class ReceiptManagerApiApplicationTests {
 
 	@Test
 	void contextLoads() {
