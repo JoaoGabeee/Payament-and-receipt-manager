@@ -1,0 +1,9 @@
+[project]
+name = "receipt-manager"
+version = "0.1.0"
+description = "Projeto Python para auxiliar no desenvolvimento do ReceiptManager"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "pre-commit>=4.5.1",
+]

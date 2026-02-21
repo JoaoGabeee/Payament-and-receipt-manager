@@ -1,0 +1,15 @@
+fail_fast: true
+default_language_version:
+  python: "3.13"
+repos:
+  - repo: local
+    hooks:
+      - id: Format Java files with spotless
+        name: Format with spotless
+        always_run: false
+        entry: python ./api/hooks/spotless_format.py
+        files: ^api/
+        language: unsupported
+        pass_filenames: false
+        stages: [pre-commit]
+        types: [java]
