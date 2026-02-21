@@ -1,6 +1,6 @@
 # Receipt Manager
 
-A ideia base deste projeto é permitir a gestão de comprovantes de pagamento, seja de transparência ou de recebimento. Ademais será possível:
+A ideia base deste projeto é permitir a gestão de comprovantes de pagamento, seja de transferência ou de recebimento. Ademais será possível:
 
 - Criar filtros;
 - Fazer o download de comprovantes;
