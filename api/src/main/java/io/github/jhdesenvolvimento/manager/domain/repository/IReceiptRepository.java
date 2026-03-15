@@ -14,6 +14,7 @@ package io.github.jhdesenvolvimento.manager.domain.repository;
 
 import io.github.jhdesenvolvimento.manager.infrastructure.entity.Receipt;
 import java.util.List;
+import java.util.Optional;
 import java.util.UUID;
 import org.jspecify.annotations.NonNull;
 import org.jspecify.annotations.NullMarked;
@@ -21,11 +22,16 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface IReceiptRepository extends JpaRepository<@NonNull Receipt, @NonNull UUID> {
 
-    @Override
     @NonNull
-    Receipt getReferenceById(@NonNull UUID uuid);
+    Optional<Receipt> findById(@NonNull UUID uuid);
 
     @Override
     @NullMarked
     List<Receipt> findAll();
+
+    @Override
+    <S extends @NonNull Receipt> S save(S receipt);
+
+    @Override
+    void deleteById(@NonNull UUID uuid);
 }

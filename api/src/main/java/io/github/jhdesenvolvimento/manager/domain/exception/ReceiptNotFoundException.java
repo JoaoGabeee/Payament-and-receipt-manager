@@ -10,22 +10,12 @@
  *
  */
 
-package io.github.jhdesenvolvimento.manager.infrastructure.entity;
+package io.github.jhdesenvolvimento.manager.domain.exception;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
 import java.util.UUID;
 
-@Entity
-public class Profile {
-
-    @Id
-    private UUID id;
-
-    @Column(unique = true, nullable = false)
-    private String name;
-
-    @Column(nullable = false)
-    private String password;
+public class ReceiptNotFoundException extends RuntimeException {
+    public ReceiptNotFoundException(UUID uuid) {
+        super("Couldn't find receipt with UUID: " + uuid);
+    }
 }

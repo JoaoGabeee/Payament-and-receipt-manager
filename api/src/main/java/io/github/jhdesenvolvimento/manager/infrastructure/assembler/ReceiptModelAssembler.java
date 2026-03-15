@@ -12,4 +12,23 @@
 
 package io.github.jhdesenvolvimento.manager.infrastructure.assembler;
 
-public class ReceiptModelAssembler {}
+import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.linkTo;
+import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;
+
+import io.github.jhdesenvolvimento.manager.infrastructure.controller.ReceiptController;
+import io.github.jhdesenvolvimento.manager.infrastructure.entity.Receipt;
+import org.jspecify.annotations.NonNull;
+import org.springframework.hateoas.EntityModel;
+import org.springframework.hateoas.server.RepresentationModelAssembler;
+import org.springframework.stereotype.Component;
+
+@Component
+public class ReceiptModelAssembler
+        implements RepresentationModelAssembler<@NonNull Receipt, @NonNull EntityModel<@NonNull Receipt>> {
+
+    @Override
+    public @NonNull EntityModel<@NonNull Receipt> toModel(@NonNull Receipt receipt) {
+        return EntityModel.of(
+                receipt, linkTo(methodOn(ReceiptController.class).all()).withRel("/receipts"));
+    }
+}
